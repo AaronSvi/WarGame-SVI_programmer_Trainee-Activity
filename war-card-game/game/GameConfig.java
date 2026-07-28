@@ -4,7 +4,7 @@ package game;
 public class GameConfig {
 
     /** Folder (relative to where the program is run from) that holds the deck .txt files. */
-    public static final String DECK_FOLDER = "deck of card";
+    public static final String DECK_FOLDER = "deck_of_card";
 
     private GameConfig() {
         // utility class — every member is static, so this is never instantiated

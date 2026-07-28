@@ -8,7 +8,7 @@ import model.io.DeckFileWriter;
 
 /**
  * Saves the winner's final deck to its own numbered file inside the deck
- * folder — "winning deck(1).txt", "(2)", and so on — never overwriting a
+ * folder — "Missing_card_test.txt", "(2)", and so on — never overwriting a
  * previous game's result.
  */
 public class WinningDeckSaver {
@@ -35,7 +35,7 @@ public class WinningDeckSaver {
         int n = 1;
         File candidate;
         do {
-            candidate = new File(GameConfig.DECK_FOLDER, "winning deck(" + n + ").txt");
+            candidate = new File(GameConfig.DECK_FOLDER, "winning_deck"+n+".txt");
             n++;
         } while (candidate.exists());
         return candidate.getPath();

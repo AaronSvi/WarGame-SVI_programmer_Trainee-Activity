@@ -45,6 +45,8 @@ public class RoundReferee {
         Card highestCard = pot.get(winnerIndex);
         System.out.println(winner + " wins round " + roundNumber + " with " + highestCard);
 
+
+
         // Winner takes the round: the winning card goes to the bottom of
         // their deck first (so it ends up on top of the group just won),
         // followed by the rest of the pot's cards in play order.
@@ -54,6 +56,8 @@ public class RoundReferee {
                 winner.getHand().addToBottom(pot.get(i));
             }
         }
+
+        System.out.println(winner + " hand: " + DeckFormatter.toHandString(winner.getHand()));
 
         System.out.println("Hand sizes after round " + roundNumber + ":");
         for (Player player : activePlayers) {

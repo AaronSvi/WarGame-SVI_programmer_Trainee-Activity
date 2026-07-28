@@ -19,9 +19,9 @@ import model.DeckFormatter;
  */
 public class DeckFileWriter {
 
-    private DeckFileWriter() {
+    //private DeckFileWriter() {
         // utility class — every method is static, so this is never instantiated
-    }
+    //}
 
     public static void write(Deck deck, String fileName) throws IOException {
         String content = DeckFormatter.toFileFormat(deck);

@@ -14,9 +14,9 @@ import java.util.List;
  */
 public class Shuffler {
 
-    private Shuffler() {
+    //private Shuffler() {
         // utility class — every method is static, so this is never instantiated
-    }
+    //}
 
     public static void riffleShuffle(Deck deck) {
         List<Card> all = deck.asList();

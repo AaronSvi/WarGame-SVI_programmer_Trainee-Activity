@@ -89,7 +89,7 @@ public class WarGame {
             // Pause so the board state above is readable, unless the user
             // has already pressed Enter to skip ahead to the end of the game.
             if (activePlayers.size() > 1 && !roundDelay.isSkipped()) {
-                roundDelay.pause(3000);
+                roundDelay.pause(2000);
             }
         }
 

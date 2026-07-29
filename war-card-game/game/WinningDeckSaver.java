@@ -13,9 +13,9 @@ import model.io.DeckFileWriter;
  */
 public class WinningDeckSaver {
 
-    private WinningDeckSaver() {
+  //  private WinningDeckSaver() {
         // utility class — every method is static, so this is never instantiated
-    }
+    //}
 
     public static void save(Player winner) {
         String outputFile = nextAvailableWinningDeckFile();

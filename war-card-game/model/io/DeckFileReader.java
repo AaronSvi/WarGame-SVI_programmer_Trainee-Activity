@@ -27,9 +27,9 @@ public class DeckFileReader {
     /** A valid game deck must contain exactly this many cards, with no duplicates. */
     private static final int REQUIRED_SIZE = 52;
 
-    private DeckFileReader() {
+  //  private DeckFileReader() {
         // utility class — every method is static, so this is never instantiated
-    }
+  //  }
 
     /**
      * The file must describe exactly 52 unique cards — anything else throws

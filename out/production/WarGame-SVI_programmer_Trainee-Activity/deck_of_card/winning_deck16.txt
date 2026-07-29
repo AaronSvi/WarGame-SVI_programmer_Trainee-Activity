@@ -1,0 +1,1 @@
+S-4,H-2,C-Q,D-10,C-K,H-5,D-8,C-3,D-A,H-10,H-Q,D-5,C-10,C-5,S-6,S-2,D-J,D-6,S-J,D-2,H-8,S-5,S-A,D-Q,D-9,C-2,D-K,S-K,H-A,H-J,C-A,S-10,S-Q,D-7,C-J,D-3,H-9,C-7,S-7,S-3,H-6,D-4,S-9,H-4,C-6,H-3,S-8,C-8,H-K,H-7,C-9,C-4

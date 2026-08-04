@@ -31,6 +31,7 @@ public class Deck {
         return new ArrayList<>(cards);
     }
 
+
     public void replaceCards(List<Card> newOrder) {
         cards.clear();
         cards.addAll(newOrder);

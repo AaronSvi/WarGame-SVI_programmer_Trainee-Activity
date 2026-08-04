@@ -12,14 +12,6 @@ public class Card {
         this.rank = rank;
     }
 
-    public Suit getSuit() {
-        return suit;
-    }
-
-    public Rank getRank() {
-        return rank;
-    }
-
     public boolean isStrongerThan(Card other) {
         int thisRank = this.rank.getValue();
         int otherRank = other.rank.getValue();

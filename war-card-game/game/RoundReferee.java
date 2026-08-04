@@ -16,7 +16,6 @@ public class RoundReferee {
         System.out.println();
         System.out.println("Game Start - Round " + roundNumber);
 
-        // Each player lays their top card on the pot.
         List<Card> pot = new ArrayList<>();
         for (Player player : activePlayers) {
             System.out.println(player + " hand: " + DeckFormatter.toHandString(player.getHand()));

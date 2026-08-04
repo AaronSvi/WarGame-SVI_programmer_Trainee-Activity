@@ -9,25 +9,13 @@ import model.DeckFormatter;
 import model.Player;
 import model.Shuffler;
 
-/**
- * War Card Game — orchestrates one full game from start to finish by
- * delegating each responsibility to its own focused class:
- *   - GameSetup        — the setup prompts (deck file, players, shuffles)
- *   - Dealer           — dealing the deck out to players
- *   - RoundReferee     — resolving a single round
- *   - RoundDelay       — the skippable 3-second pause between rounds
- *   - WinningDeckSaver — saving the winner's final deck to file
- *
- * This class only holds the overall flow: what happens, and in what order.
- * Main.java only calls play() to start it.
- */
+
 public class WarGame {
 
     private final Scanner in = new Scanner(System.in);
     private final GameSetup setup = new GameSetup(in);
     private final RoundDelay roundDelay = new RoundDelay(in);
 
-    /** Runs one complete game, start to finish. This is what Main.main() calls. */
     public void play() {
         Deck deck = setup.promptForDeckFile();
 
@@ -63,12 +51,7 @@ public class WarGame {
         WinningDeckSaver.save(winner);
     }
 
-    /**
-     * Plays rounds until one player holds every card. Returns the number of
-     * rounds actually played. Delegates the actual round logic to
-     * RoundReferee; this method just controls the repeat-until-one-winner
-     * loop, elimination checks, and the pause between rounds.
-     */
+
     private int playGame(List<Player> activePlayers) {
         int roundNumber = 1;
 
@@ -76,7 +59,6 @@ public class WarGame {
             RoundReferee.playRound(activePlayers, roundNumber);
             roundNumber++;
 
-            // Eliminate any player left with no cards.
             Iterator<Player> it = activePlayers.iterator();
             while (it.hasNext()) {
                 Player player = it.next();
@@ -86,8 +68,7 @@ public class WarGame {
                 }
             }
 
-            // Pause so the board state above is readable, unless the user
-            // has already pressed Enter to skip ahead to the end of the game.
+
             if (activePlayers.size() > 1 && !roundDelay.isSkipped()) {
                 roundDelay.pause(2000);
             }

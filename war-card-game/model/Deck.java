@@ -31,11 +31,6 @@ public class Deck {
         return new ArrayList<>(cards);
     }
 
-    /**
-     * Replaces the entire pile with a new top-to-bottom order. Used by
-     * Shuffler to install a freshly shuffled order without handing out the
-     * internal Deque itself to other classes.
-     */
     public void replaceCards(List<Card> newOrder) {
         cards.clear();
         cards.addAll(newOrder);

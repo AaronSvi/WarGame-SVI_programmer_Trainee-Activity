@@ -3,14 +3,10 @@ package model;
 import java.util.Iterator;
 import java.util.List;
 
-/**
- * Turns a Deck's current cards into text, in the three formats this program
- * needs. Kept separate from Deck itself so "how a deck looks on screen or
- * in a file" doesn't have to live inside the class that just manages cards.
- */
+
 public class DeckFormatter {
 
-    /** Plain comma-separated format, e.g. "D-A,D-K,D-Q", used for saved/loaded deck files. */
+    // Plain comma-separated format, e.g. "D-A,D-K,D-Q", used for saved/loaded deck files
     public static String toFileFormat(Deck deck) {
         List<Card> list = deck.asList();
         StringBuilder sb = new StringBuilder();
@@ -24,11 +20,6 @@ public class DeckFormatter {
         return sb.toString();
     }
 
-    /**
-     * A human-readable, multi-line view for printing a whole deck to the
-     * console: fixed-width cards, 13 per row, instead of one very long
-     * comma-separated line.
-     */
     public static String toDisplayString(Deck deck) {
         List<Card> list = deck.asList();
         int cardsPerRow = 13;
@@ -44,11 +35,7 @@ public class DeckFormatter {
         return sb.toString();
     }
 
-    /**
-     * A compact, single-line, comma-and-space-separated list of the current
-     * cards, e.g. "D-A, D-K, D-Q". Used to show a player's whole hand on one
-     * line each round.
-     */
+
     public static String toHandString(Deck deck) {
         List<Card> list = deck.asList();
         StringBuilder sb = new StringBuilder();

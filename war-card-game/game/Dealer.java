@@ -7,12 +7,8 @@ import model.Card;
 import model.Deck;
 import model.Player;
 
-/** Deals a whole Deck out to a set of Players, round-robin, one card at a time. */
+//gives the card sto the players
 public class Dealer {
-
-   // private Dealer() {
-        // utility class — every method is static, so this is never instantiated
-   // }
 
     public static List<Player> deal(Deck deck, int numPlayers) {
         List<Player> players = new ArrayList<>();

@@ -9,12 +9,7 @@ import java.util.Scanner;
 import model.Deck;
 import model.io.DeckFileReader;
 
-/**
- * Everything involved in setting up a game before the first round: picking
- * a deck file (with validation and retry), and asking how many players and
- * how many shuffles to use. Kept separate from WarGame so "asking the
- * setup questions" is its own job, distinct from "running the rounds".
- */
+
 public class GameSetup {
 
     private final Scanner in;
@@ -23,7 +18,6 @@ public class GameSetup {
         this.in = in;
     }
 
-    /** Lists the .txt files inside the deck folder, e.g. "input.txt". */
     private List<String> listAvailableTextFiles() {
         List<String> names = new ArrayList<>();
         File deckDir = new File(GameConfig.DECK_FOLDER);
@@ -36,7 +30,6 @@ public class GameSetup {
         return names;
     }
 
-    /** Keeps asking for a deck file name until one is typed that loads successfully. */
     public Deck promptForDeckFile() {
         while (true) {
             List<String> available = listAvailableTextFiles();
@@ -74,13 +67,7 @@ public class GameSetup {
         return promptForRangedInt("Enter number of shuffles (1-9): ", 1, 9);
     }
 
-    /**
-     * Repeatedly prompts for a whole number between min and max (inclusive),
-     * with a distinct error message for each way the input can be wrong:
-     *   - not a whole number at all (letters, symbols, decimals, etc.)
-     *   - a negative number
-     *   - a valid whole number that's simply outside the allowed range
-     */
+
     private int promptForRangedInt(String prompt, int min, int max) {
         while (true) {
             System.out.print(prompt);

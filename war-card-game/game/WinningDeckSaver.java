@@ -6,16 +6,9 @@ import java.io.IOException;
 import model.Player;
 import model.io.DeckFileWriter;
 
-/**
- * Saves the winner's final deck to its own numbered file inside the deck
- * folder — "Missing_card_test.txt", "(2)", and so on — never overwriting a
- * previous game's result.
- */
+
 public class WinningDeckSaver {
 
-  //  private WinningDeckSaver() {
-        // utility class — every method is static, so this is never instantiated
-    //}
 
     public static void save(Player winner) {
         String outputFile = nextAvailableWinningDeckFile();
@@ -27,10 +20,7 @@ public class WinningDeckSaver {
         }
     }
 
-    /**
-     * Finds a filename that doesn't exist yet, so each game's winning deck
-     * is kept instead of overwriting the previous one.
-     */
+
     private static String nextAvailableWinningDeckFile() {
         int n = 1;
         File candidate;

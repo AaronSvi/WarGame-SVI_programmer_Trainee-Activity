@@ -10,10 +10,6 @@ import java.util.List;
  */
 public class DeckFormatter {
 
-   // private DeckFormatter() {
-        // utility class — every method is static, so this is never instantiated
-   // }
-
     /** Plain comma-separated format, e.g. "D-A,D-K,D-Q", used for saved/loaded deck files. */
     public static String toFileFormat(Deck deck) {
         List<Card> list = deck.asList();

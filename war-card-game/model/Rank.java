@@ -1,11 +1,5 @@
 package model;
 
-/**
- * The thirteen card ranks, in the descending order given by the requirements
- * doc: ace, king, queen, jack, ten, nine, eight, seven, six, five, four,
- * three, two. The "value" field is what Card#compareStrength actually
- * compares.
- */
 public enum Rank {
     ACE("A", 14),
     KING("K", 13),
@@ -37,7 +31,6 @@ public enum Rank {
         return value;
     }
 
-    /** Parses the code used in the deck text file (e.g. "A", "K", "10", "7"). */
     public static Rank fromCode(String code) {
         for (Rank r : values()) {
             if (r.code.equalsIgnoreCase(code)) {

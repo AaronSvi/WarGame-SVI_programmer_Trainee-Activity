@@ -7,7 +7,6 @@ import model.Card;
 import model.Deck;
 import model.Player;
 
-//gives the card sto the players
 public class Dealer {
 
     public static List<Player> deal(Deck deck, int numPlayers) {
